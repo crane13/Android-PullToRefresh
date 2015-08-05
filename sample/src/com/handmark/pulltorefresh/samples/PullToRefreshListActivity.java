@@ -72,8 +72,12 @@ public final class PullToRefreshListActivity extends ListActivity {
 				// Do work to refresh the list here.
 				new GetDataTask().execute();
 			}
+			
+			
 		});
 
+		mPullRefreshListView.setMode(Mode.BOTH);
+		
 		// Add an end-of-list listener
 		mPullRefreshListView.setOnLastItemVisibleListener(new OnLastItemVisibleListener() {
 
